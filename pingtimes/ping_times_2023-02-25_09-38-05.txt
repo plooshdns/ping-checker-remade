@@ -1,0 +1,4 @@
+Ping time for upload.superintendent.me: 37.0 ms
+Ping time for www.facebook.com: 46.0 ms
+Ping time for www.amazon.com: 54.0 ms
+The fastest server is upload.superintendent.me with a ping time of 37.0 ms
