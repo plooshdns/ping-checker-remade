@@ -43,6 +43,13 @@ class PingThread(QThread):
                 print(f"We found a Server With the lowest ping of {self.lowest_ping_time} ms")
                 file.write(f"The fastest server is {self.fastest_server} with a ping time of {self.lowest_ping_time} ms\n")
                 self.ping_finished.emit(f"The fastest server is {self.fastest_server} with a ping time of {self.lowest_ping_time} ms")
+                #dns change config
+                interface_name = 'Ethernet'
+                dns_servers = ['8.8.8.8', '8.8.4.4']
+
+                command = f'netsh interface ip set dns name="{interface_name}" static {dns_servers[0]} {dns_servers[1]}'
+
+                subprocess.run(command, shell=True)
 
             else:
                 print("No servers responded to ping")
